@@ -7,7 +7,18 @@
     const remaining = leaderboard.slice(3);
 </script>
 
+<!-- Navbar -->
+
+
 <div class="container">
+
+    <nav class="navbar">
+  <div class="nav-links">
+    <a href="/">Home</a>
+    <a href="/resources">Resources</a>
+  </div>
+</nav>
+
     <div class="header">
         <h1 class="title">🔬 Hackenshmirtz Leaderboard 🔬</h1>
         <p class="subtitle">Top Secret Evil Invention Rankings</p>
