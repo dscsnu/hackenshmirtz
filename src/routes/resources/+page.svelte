@@ -6,14 +6,21 @@
   <!-- Navbar -->
   <nav class="navbar">
     <div class="nav-links">
+      <a href="/">Home</a>
       <a href="/leaderboard">Leaderboard</a>
-      <a href="/resources">Resources</a>
     </div>
   </nav>
 
   <!-- Main content -->
   <div class="content">
-    <h1 class="title">hackenshmirtz</h1>
+    <div class="coming-soon-container">
+      <h1 class="title">Resources</h1>
+      <div class="coming-soon">
+        <h2>Coming Soon</h2>
+        <p>We're working on gathering the best resources for you.</p>
+        <p>Check back later for updates!</p>
+      </div>
+    </div>
   </div>
 </div>
 
@@ -22,17 +29,17 @@
     margin: 0;
     padding: 0;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
-}
+  }
 
-:global(html) {
+  :global(html) {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
+  }
 
-:global(*, *::before, *::after) {
+  :global(*, *::before, *::after) {
     box-sizing: inherit;
-}
+  }
 
   .page-container {
     position: relative;
@@ -100,41 +107,34 @@
     padding: 1rem;
   }
 
-  .title {
-    font-size: clamp(2.5rem, 10vw, 5rem);
-    color: white;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  .coming-soon-container {
     text-align: center;
-    word-break: break-word;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 2rem;
+    border-radius: 10px;
+    max-width: 600px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   }
 
-  /* Media queries for responsive design */
-  @media (max-width: 768px) {
-    .navbar {
-      padding: 0.75rem 0.5rem;
-    }
-
-    .nav-links {
-      gap: 0.75rem;
-    }
-
-    .nav-links a {
-      font-size: 0.9rem;
-      padding: 0.4rem 0.8rem;
-    }
+  .title {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: #61dafb;
   }
 
-  @media (max-width: 480px) {
-    .navbar {
-      padding: 0.5rem 0.25rem;
-    }
+  .coming-soon {
+    margin-top: 1.5rem;
+  }
 
-    .nav-links {
-      gap: 0.5rem;
-    }
+  .coming-soon h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #61dafb;
+  }
 
-    .content {
-      height: calc(100vh - 60px);
-    }
+  .coming-soon p {
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
   }
 </style>
