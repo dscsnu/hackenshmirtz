@@ -5,7 +5,6 @@
 <div class="page-container">
   <!-- Navbar -->
   <nav class="navbar">
-    <div class="logo">Hackenshmirtz</div>
     <div class="nav-links">
       <a href="/leaderboard">Leaderboard</a>
       <a href="/resources">Resources</a>
@@ -19,6 +18,16 @@
 </div>
 
 <style>
+  :global(body) {
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+}
+
+:global(html) {
+    margin: 0;
+    padding: 0;
+}
   .page-container {
     position: relative;
     min-height: 100vh;
@@ -37,23 +46,18 @@
     background-image: url('/phineas-ferb-cast.jpg');
     background-size: cover;
     background-position: center;
-    filter: brightness(0.4); /* Reduce brightness to 40% */
+    filter: brightness(0.4) blur(2px); /* Reduce brightness to 40% */
     z-index: -1;
   }
 
   /* Navbar styles */
   .navbar {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     padding: 1rem 2rem;
     background-color: rgba(0, 0, 0, 0.7);
     color: white;
-  }
-
-  .logo {
-    font-size: 1.5rem;
-    font-weight: bold;
   }
 
   .nav-links {
@@ -65,11 +69,17 @@
     color: white;
     text-decoration: none;
     font-size: 1.1rem;
-    transition: color 0.3s;
+    transition: all 0.3s;
+    padding: 0.5rem 1rem;
+    border: 2px solid white;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.3);
   }
 
   .nav-links a:hover {
     color: #61dafb;
+    border-color: #61dafb;
+    background-color: rgba(0, 0, 0, 0.5);
   }
 
   /* Content styles */
